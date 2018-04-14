@@ -1,0 +1,70 @@
+form {
+    max-width: 680px;
+    display: block;
+    margin: 0 auto 40px;
+    background-color: $backgroundMain;
+    padding: 40px 20px;
+    border-radius: 10px;
+    border: 1px solid $border;
+    box-shadow: 0 0 20px #333;
+    @extend .beforeAnimation;
+   @include animation(0.3s);
+
+    label {
+        text-align:center;
+        display:block;
+        font-size: 24px;
+        font-family: $cardo;
+        margin: 0 0 40px;
+    }
+
+    input[type='text'] {
+        width: 100%;
+        display:block;
+        border: 1px solid $border;
+        height: 40px;
+        line-height: 40px;
+        font-size:20px;
+        font-family: $montserrat;
+        padding: 0 10px;
+        margin: 0 0 20px;
+        outline: none;
+        @extend .transition;
+        &:focus {
+            border-bottom: 1px solid $mainGreen;
+            @extend .transition;
+        }
+    }
+
+    button{
+        background-color: $buttonColor;
+        color: $white;
+        font-family: $montserrat;
+        font-weight: 800;
+        border:0;
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        font-size: 20px;
+        cursor: pointer;
+        text-transform: uppercase;
+        border: 1px solid $buttonColor;
+        z-index:99;
+        @extend .transition;
+
+        &:hover {
+            background-color: rgba(0,0,0,0);
+            color: $buttonColor;
+            @extend .transition;
+        }
+    }
+
+    .warning {
+        display: none;
+        color: $warning;
+        margin: 0 0 10px;
+        font-size: 16px;
+        font-family: $cardo;
+        font-weight: 800;
+    }
+}

@@ -1,0 +1,38 @@
+body {
+    
+    background: rgba(0,0,0,0) url('./img/1.jpg') no-repeat fixed 0 0/ cover;
+    
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+section {
+    margin: 0 0 40px;
+    padding: 0 10px;
+}
+
+
+.transition {
+    transition: all .3s ease-in-out;
+}
+
+@keyframes showIn {
+    0% {
+        transform: translateX(-10px);
+        opacity:0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
+.beforeAnimation {
+    transform: translateX(-10px);
+    opacity: 0;
+}

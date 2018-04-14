@@ -1,0 +1,44 @@
+@media screen and (max-width: 1024px) {
+    body {
+    
+        background: rgba(0,0,0,0) url('./img/2.jpg') no-repeat fixed 0 0/ cover;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .weatherInfo {
+        .sunInfo,
+        .weatherCond,
+        .currentTime {
+            flex: 0 0 50%;
+        }
+    
+        .mainWeather {
+            .singleBox {
+                flex: 0 0 33%;
+            }
+        }
+    }
+   
+
+}
+
+@media screen and (max-width: 480px) {
+    
+        .weatherInfo {
+            .sunInfo,
+            .weatherCond,
+            .currentTime {
+                flex: 0 0 100%;
+            }
+        
+            .mainWeather {
+                .singleBox {
+                    flex: 0 0 50%;
+                }
+            }
+        }
+       
+    
+    }

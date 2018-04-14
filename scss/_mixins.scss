@@ -1,0 +1,6 @@
+@mixin animation($delay) {
+    animation-name: showIn;
+    animation-duration: 0.5s;
+    animation-delay: $delay;
+    animation-fill-mode: forwards;
+}

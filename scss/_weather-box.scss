@@ -1,0 +1,174 @@
+.weatherInfo {
+    max-width: 1000px;
+    background-color: $white;
+    display: flex;
+    margin: 0 auto;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #333;
+
+    .fetch-info {
+        text-align:center;
+        font-size: 24px;
+        font-family: $montserrat;
+        font-weight: 700;
+        width: 100%;
+    }
+
+    h2 {
+        text-align:center;
+        font-size: 30px;
+        font-family: $montserrat;
+        line-height: 40px;
+        flex: 0 0 100%;
+        padding: 10px 0 10px;
+        border-bottom: 1px solid $border;
+        border-top: 1px solid $border;
+    }
+
+    .mainWeather {
+        flex: 0 0 100%;
+        display:flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-content: center;
+        background-color: $backgroundMain;
+        border-top: 1px solid $border;
+        border-bottom: 1px solid $border;
+        will-change: auto;
+        @extend .beforeAnimation;
+        @include animation(0.9s);
+        
+        .singleBox {
+            flex: 0 0 20%;
+            border-left: 1px solid $border;
+            
+            &:first-of-type {
+                border-left: 0;
+            }
+
+            span {
+                will-change: auto;
+                @extend .beforeAnimation;
+                @include animation(1.3s);
+            }
+        }
+
+    }
+
+    .singleBox {
+        display:flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        padding: 20px 0;
+        will-change: auto;
+        @extend .beforeAnimation;
+        @include animation(0.3s);
+        
+        p {
+            font-size: 16px;
+            font-family: $cardo;
+            margin: 0 0 20px;
+        }
+
+        span {
+            width: 100%;
+            font-size: 24px;
+            font-family: $montserrat;
+            font-weight: 800;
+            text-align:center;
+        }
+    }
+
+    .sunInfo,
+    .weatherCond,
+    .currentTime {
+        flex: 0 0 33%;
+    }
+
+    .weatherCond {
+        display:flex;
+        flex-flow: row wrap;
+        will-change: auto;
+        @extend .beforeAnimation;
+        @include animation(0.5s);
+        
+        .icon {
+            order: 1;
+            flex: 0 0 100%;
+        }
+
+        .main {
+            order: 2;
+            flex: 0 0 50%;
+            word-break: break-word;
+            font-size: 18px;
+        }
+
+        .description {
+            order: 3;
+            flex: 0 0 50%;
+        }
+
+        span {
+            word-break: break-word;
+            font-size: 18px;
+        }
+    }
+
+    .sunInfo {
+        display:flex;
+        align-content: center;
+        flex-flow: row wrap;
+        padding: 0 20px;
+        border-right: 1px solid $border;
+        will-change: auto;
+        @extend .beforeAnimation;
+        @include animation(0.3s);
+
+        .singleBox {
+            justify-content: center;
+            align-content: center;
+            flex: 0 0 100%;
+            span {
+                width: auto;
+            }
+
+            p {
+                margin: 0 20px 0 0;
+            }
+        }
+    }
+
+    .currentTime {
+        display:flex;
+        align-content: center;
+        flex-flow: row wrap;
+        align-items: center;
+        border-left: 1px solid $border;
+        will-change: auto;
+        @extend .beforeAnimation;
+        @include animation(0.7s);
+        .singleBox {
+            flex: 0 0 100%;
+        }
+    }
+
+    .windInfo {
+        flex: 0 0 100%;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        padding: 0 0 30px;
+        will-change: auto;
+        @extend .beforeAnimation;
+        @include animation(1.1s);
+
+        .singleBox {
+            flex: 0 0 50%;
+        }
+    }
+}

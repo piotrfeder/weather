@@ -1,0 +1,21 @@
+/* fonts */
+
+$cardo : 'Cardo', serif;
+$montserrat:  'Montserrat', sans-serif;
+
+/* colors */
+
+$backgroundMain:#f9f9f9;
+$white: #fff;
+$border: #eee;
+$buttonColor: #29B6F6;
+$warning: #D32F2F;
+$mainGreen: #AED581;
+
+@import './scss/_normalize.scss';
+@import './scss/_mixins.scss';
+@import './scss/_base.scss';
+@import './scss/_header.scss';
+@import './scss/_form.scss';
+@import './scss/_weather-box.scss';
+@import './scss/_responsive.scss';
